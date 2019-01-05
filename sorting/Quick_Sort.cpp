@@ -1,3 +1,7 @@
+//AUTHOR : SALONI TYAGI
+//QUICK SORT
+//INPLACE SORTING
+
 #include <iostream>
 
 using namespace std;
