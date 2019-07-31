@@ -9,7 +9,7 @@ int main() {
 	int a[n] , lis[n];
 	vector<int>seq ;
 	int index[n] ; //to store the index which resulted in lis at position i ;
-	
+	int ans=0;
 	for(int i=0 ; i < n; i++) {
 		cin >> a[i] ;
 		lis[i]=1 ;
@@ -22,12 +22,13 @@ int main() {
 				if(lis[j]+1 > lis[i]) {
 					lis[i] = max(lis[i], lis[j]+1) ;
 					index[i] = j ;
+					ans = max(ans, lis[i]);
 				}
 			}
 		}
 	}
 	cout << "LIS is : " ;
-	cout << lis[n-1] << "\n" ;
+	cout << ans << "\n" ;
 	cout << "Sequence is " ;
 	int k = n-1;
 	
